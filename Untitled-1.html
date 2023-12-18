@@ -63,6 +63,23 @@
             
             let string = prompt("Введите фразу короля");
             kingSayd(string)*/
+
+      function isFridayToday() { //5 задание (добавлен)
+    let today = new Date().getDay(); 
+    let days;
+    
+    if (today === 5) {
+        return("Сегодня пятница!");
+    } else if (today === 4) {
+        return("Пятница была вчера");
+    } else if (today === 6) {
+        return("Завтра пятница!");
+    } else {
+        days = (5 - today + 7) % 7;
+        return("Пятница будет через " + days + " " + (days === 1 ? "день" : "дня"));
+    }
+}
+console.log(isFridayToday());
    </script>
 </body>
 </html>
